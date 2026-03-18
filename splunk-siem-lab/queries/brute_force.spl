@@ -1,0 +1,8 @@
+
+# Brute Force Login Detection
+# Detects multiple failed login attempts (EventCode 4625)
+
+
+index=botsv3 EventCode=4625
+| stats count by host
+| sort -count

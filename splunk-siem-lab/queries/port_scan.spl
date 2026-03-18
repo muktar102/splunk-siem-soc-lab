@@ -1,0 +1,7 @@
+# Port Scanning Detection
+# Identify hosts connecting to many different destination ports
+
+index=botsv3
+| stats dc(dest_port) as unique_ports by src_ip
+| where unique_ports > 30
+| sort -unique_ports

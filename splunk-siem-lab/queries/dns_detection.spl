@@ -1,0 +1,6 @@
+# DNS / Domain Communication Analysis
+# Detect most contacted domains which may indicate Command & Control traffic
+
+index=botsv3 sourcetype=syslog
+| stats count by ds
+| sort -count

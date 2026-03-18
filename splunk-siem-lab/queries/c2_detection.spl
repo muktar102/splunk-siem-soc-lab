@@ -1,0 +1,7 @@
+# High Volume Network Communication Detection
+# Identify potential Command and Control (C2) communication
+
+index=botsv3
+| stats count by src_ip dest_ip
+| where count > 20000
+| sort -count

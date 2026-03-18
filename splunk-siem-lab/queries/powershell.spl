@@ -1,0 +1,6 @@
+# Suspicious PowerShell Activity Detection
+# Monitor PowerShell execution which may indicate post-exploitation
+
+index=botsv3 "powershell"
+| stats count by host sourcetype
+| sort -count

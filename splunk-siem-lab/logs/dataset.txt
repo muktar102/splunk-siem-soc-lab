@@ -1,0 +1,8 @@
+
+
+BOTSv3 Dataset Download Link:
+
+https://drive.google.com/drive/folders/1CVJy8BhiPnvCKv8g231vnkI4h7YYoPtH?usp=drive_link\
+
+Dataset size: 631 MB
+Used for Splunk SIEM detection lab
