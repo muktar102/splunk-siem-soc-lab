@@ -56,7 +56,7 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 * PowerShell execution trends
 * Network traffic anomalies
 
-![SOC Dashboard](screenshots/soc_dashboard.png)
+![Dashboard](soc_dashboard.png)
 
 👉 This dashboard enables analysts to quickly identify anomalies and prioritize investigations.
 
