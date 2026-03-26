@@ -56,7 +56,7 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 * PowerShell execution trends
 * Network traffic anomalies
 
-![SOC Dashboard](dashboard/soc_dashboard.png)
+![SOC Dashboard](splunk-siem-lab/dashboard/soc_dashboard.png)
 
 👉 This dashboard enables analysts to quickly identify anomalies and prioritize investigations.
 
