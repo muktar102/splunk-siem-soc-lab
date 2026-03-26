@@ -66,7 +66,7 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 
 Multiple alerts were configured in Splunk to automatically detect suspicious activities.
 
-![Alerts](splunk-siem-lab/alerts_overview.png)
+![Alerts](splunk-siem-lab/dashboard/alerts_overview.png)
 
 ### Alerts Created:
 
