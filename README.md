@@ -66,7 +66,7 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 
 Multiple alerts were configured in Splunk to automatically detect suspicious activities.
 
-![Alerts](screenshots/alerts_overview.png)
+![Alerts](splunk-siem-lab/screenshots/alerts_overview.png)
 
 ### Alerts Created:
 
@@ -84,9 +84,9 @@ Multiple alerts were configured in Splunk to automatically detect suspicious act
 
 This detection identifies repeated failed login attempts from a single source.
 
-![Brute Force Query](screenshots/brute_force.png)
+![Brute Force Query](splunk-siem-lab/screenshots/brute_force.png)
 
-![Brute Force Results](screenshots/brute_force2.png)
+![Brute Force Results](splunk-siem-lab/screenshots/brute_force2.png)
 
 **Analysis:**
 
@@ -100,9 +100,9 @@ This detection identifies repeated failed login attempts from a single source.
 
 Detection of abnormal DNS queries that may indicate communication with malicious domains.
 
-![DNS Query](screenshots/dns_detection.png)
+![DNS Query](splunk-siem-lab/screenshots/dns_detection.png)
 
-![DNS Results](screenshots/dns_detection1.png)
+![DNS Results](splunk-siem-lab/screenshots/dns_detection1.png)
 
 **Analysis:**
 
@@ -117,9 +117,9 @@ Detection of abnormal DNS queries that may indicate communication with malicious
 
 Identifies hosts scanning multiple ports, indicating reconnaissance behavior.
 
-![Port Scan Query](screenshots/port_scan.png)
+![Port Scan Query](splunk-siem-lab/screenshots/port_scan.png)
 
-![Port Scan Results](screenshots/port_scan2.png)
+![Port Scan Results](splunk-siem-lab/screenshots/port_scan2.png)
 
 **Analysis:**
 
@@ -133,7 +133,7 @@ Identifies hosts scanning multiple ports, indicating reconnaissance behavior.
 
 Detects unusual spikes in communication between systems.
 
-![C2 Detection](screenshots/c2_detection.png)
+![C2 Detection](splunk-siem-lab/screenshots/c2_detection.png)
 
 **Analysis:**
 
@@ -147,7 +147,7 @@ Detects unusual spikes in communication between systems.
 
 Monitors abnormal PowerShell execution patterns.
 
-![PowerShell Detection](screenshots/powershell.png)
+![PowerShell Detection](splunk-siem-lab/screenshots/powershell.png)
 
 **Analysis:**
 
