@@ -30,25 +30,25 @@ Objectives
 
 ---
 
-## 🔎 Detection Use Cases Implemented
+## Detection Use Cases Implemented
 
-### ✅ Brute Force Login Detection
+### Brute Force Login Detection
 
 Detects repeated failed login attempts from Windows Security Logs.
 
-### ✅ Port Scanning Detection
+### Port Scanning Detection
 
 Identifies hosts scanning multiple ports indicating reconnaissance activity.
 
-### ✅ Suspicious PowerShell Execution
+### Suspicious PowerShell Execution
 
 Monitors abnormal PowerShell activity which may indicate malware execution or lateral movement.
 
-### ✅ Suspicious DNS / Command & Control Detection
+### Suspicious DNS / Command & Control Detection
 
 Detects abnormal DNS queries and possible communication with malicious domains.
 
-### ✅ High Volume Network Communication
+###  High Volume Network Communication
 
 Identifies unusual traffic spikes between internal systems.
 
@@ -136,7 +136,7 @@ splunk-siem-lab/
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Ahmed Muktar
 Aspiring SOC Analyst | Cyber Security
