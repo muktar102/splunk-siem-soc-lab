@@ -2,41 +2,28 @@
 
 ## Project Overview
 
-This project demonstrates the implementation of a **Security Information and Event Management (SIEM)** solution using **Splunk Enterprise** to detect, analyze, and respond to simulated cyber security threats.
+Overview
 
-The lab focuses on real-world **SOC Analyst use-cases** such as brute force attacks, port scanning, command-and-control communication, suspicious PowerShell activity, and abnormal network traffic patterns.
+This project documents the design and implementation of a Security Information and Event Management (SIEM) environment using Splunk Enterprise. The lab was built to replicate the daily workflow of a Security Operations Center (SOC) analyst responsible for monitoring, investigating, and responding to suspicious activity within an enterprise network.
 
-Using the **BOTS v3 dataset**, multiple detection queries, dashboards, alerts, and incident reports were developed to simulate enterprise security monitoring operations.
+The environment uses the BOTS v3 dataset to simulate realistic security events generated across multiple systems, users, and network segments. These logs were ingested into Splunk and analyzed to identify malicious behavior, create detections, generate alerts, and support incident investigation.
 
-Perfect Ahmed — this is now **real SOC-level work** 🔥
-I’ll give you a **fully rewritten professional README** with your screenshots placed correctly.
+The objective of the project was to move beyond simple log collection and demonstrate how security events can be transformed into actionable intelligence.
 
-👉 Just copy-paste this into your `README.md`
+The lab focuses on the following areas:
 
----
-
-# 🚨 Splunk SIEM SOC Monitoring Lab
-
-## 📌 Project Overview
-
-This project demonstrates the implementation of a **Security Information and Event Management (SIEM)** solution using **Splunk Enterprise** to detect, analyze, and respond to simulated cyber threats.
-
-The lab simulates real-world **SOC Analyst workflows**, including detection, monitoring, alerting, and incident investigation using the **BOTS v3 dataset**.
-
----
-
-## Objectives
-
-* Implement SIEM monitoring using Splunk
-* Detect common attack techniques
-* Build SOC dashboards for threat visibility
-* Configure automated alert rules
-* Perform incident analysis and reporting
+* Centralized log collection and analysis
+* Detection of common attack techniques
+* Development of SPL search queries
+* Alert creation and monitoring
+* Dashboard design and visualization
+* Incident investigation and reporting
+* Prioritization and escalation of security events
 * Map detections to MITRE ATT&CK Framework
-
+  
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 * Splunk Enterprise (SIEM)
 * BOTS v3 Dataset
@@ -45,7 +32,7 @@ The lab simulates real-world **SOC Analyst workflows**, including detection, mon
 
 ---
 
-## 📊 SOC Monitoring Dashboard
+##SOC Monitoring Dashboard
 
 A centralized dashboard was created to provide **real-time visibility** into security events:
 
