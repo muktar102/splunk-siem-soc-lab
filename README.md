@@ -21,6 +21,9 @@ The lab focuses on the following areas:
 * Prioritization and escalation of security events
 * Map detections to MITRE ATT&CK Framework
 
+<p align="left">
+  <img src="splunk-siem-lab/screenshots/project diagram.png" width="700">
+</p>
 ---
 
 ## Tools & Technologies
@@ -29,9 +32,7 @@ The lab focuses on the following areas:
 * BOTS v3 Dataset
 * SPL (Search Processing Language)
 * MITRE ATT&CK Framework
-<p align="center">
-  <img src="splunk-siem-lab/dashboard/soc_dashboard.png" width="700">
-</p>
+
 ---
 
 ##SOC Monitoring Dashboard
@@ -44,7 +45,7 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 * Suspicious DNS traffic
 * PowerShell execution trends
 * Network traffic anomalies
-<p align="center">
+<p align="left">
   <img src="splunk-siem-lab/dashboard/soc_dashboard.png" width="700">
 </p>
 
@@ -54,7 +55,9 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 
 Multiple alerts were configured in Splunk to automatically detect suspicious activities.
 
-![Alerts](splunk-siem-lab/dashboard/alerts_overview.png)
+<p align="left">
+  <img src="splunk-siem-lab/dashboard/alerts_overview.png" width="700">
+</p>
 
 ### Alerts Created:
 
@@ -64,17 +67,18 @@ Multiple alerts were configured in Splunk to automatically detect suspicious act
 * Command & Control Communication
 * Suspicious PowerShell Execution
 
-👉 Alerts trigger when defined thresholds are exceeded, enabling real-time SOC response.
+Alerts trigger when defined thresholds are exceeded, enabling real-time SOC response.
 
 ---
 
-## 🔐 Brute Force Detection
+## Brute Force Detection
 
 This detection identifies repeated failed login attempts from a single source.
+<p align="center">
+  <img src="splunk-siem-lab/screenshots/brute_force.png" width="45%">
+  <img src="splunk-siem-lab/screenshots/brute_force2.png" width="45%">
+</p>
 
-![Brute Force Query](splunk-siem-lab/screenshots/brute_force.png)
-
-![Brute Force Results](splunk-siem-lab/screenshots/brute_force2.png)
 
 **Analysis:**
 
@@ -84,13 +88,11 @@ This detection identifies repeated failed login attempts from a single source.
 
 ---
 
-## 🌐 Suspicious DNS / C2 Detection
+## Suspicious DNS / C2 Detection
 
 Detection of abnormal DNS queries that may indicate communication with malicious domains.
-
-![DNS Query](splunk-siem-lab/screenshots/dns_detection.png)
-
 ![DNS Results](splunk-siem-lab/screenshots/dns_detection1.png)
+![DNS Query](splunk-siem-lab/screenshots/dns_detection.png)
 
 **Analysis:**
 
@@ -101,7 +103,7 @@ Detection of abnormal DNS queries that may indicate communication with malicious
 
 ---
 
-## 🔍 Port Scanning Detection
+## Port Scanning Detection
 
 Identifies hosts scanning multiple ports, indicating reconnaissance behavior.
 
@@ -117,7 +119,7 @@ Identifies hosts scanning multiple ports, indicating reconnaissance behavior.
 
 ---
 
-## 📡 High Volume Network Communication (Possible Exfiltration)
+## High Volume Network Communication (Possible Exfiltration)
 
 Detects unusual spikes in communication between systems.
 
@@ -131,7 +133,7 @@ Detects unusual spikes in communication between systems.
 
 ---
 
-## 💻 Suspicious PowerShell Activity
+## Suspicious PowerShell Activity
 
 Monitors abnormal PowerShell execution patterns.
 
@@ -145,7 +147,7 @@ Monitors abnormal PowerShell execution patterns.
 
 ---
 
-## 🧠 MITRE ATT&CK Mapping
+## MITRE ATT&CK Mapping
 
 | Detection            | Technique                         |
 | -------------------- | --------------------------------- |
@@ -157,7 +159,7 @@ Monitors abnormal PowerShell execution patterns.
 
 ---
 
-## 📄 Incident Response Reports
+## Incident Response Reports
 
 Simulated incident investigations were conducted including:
 
@@ -169,22 +171,9 @@ Simulated incident investigations were conducted including:
 
 ---
 
-## 📁 Project Structure
-
-```
-splunk-siem-lab/
-│
-├── README.md
-├── logs/
-├── queries/
-├── dashboard/
-├── screenshots/
-└── report/
-```
-
 ---
 
-## 💡 Skills Demonstrated
+## Skills Demonstrated
 
 * SIEM Implementation
 * Log Analysis & Threat Detection
@@ -196,93 +185,17 @@ splunk-siem-lab/
 
 ---
 
-## 🚀 Conclusion
+## Conclusion
+This project demonstrates how Splunk can be used as a SIEM platform to support real-world SOC operations. Through the use of realistic log data, custom detections, alerts, and investigations, the lab provides practical experience in identifying and responding to suspicious activity.
 
+The project highlights the importance of log analysis, event correlation, and timely response in maintaining visibility across an enterprise environment.
 This project demonstrates hands-on experience in:
-
 * Building a SIEM environment
 * Detecting real-world attack techniques
 * Creating actionable alerts
 * Performing SOC-level investigations
 
-👉 It reflects practical skills required for a **SOC Analyst role**.
 
----
-
-## 🏆 (Important Tip for You)
-
-Ahmed — this README is now:
-
-* ✔ Recruiter-friendly
-* ✔ Visual (this is HUGE)
-* ✔ Practical (not theory)
-
-👉 This is the level that **gets interviews**
-
----
-
-## 🚀 Next Move (VERY IMPORTANT)
-
-Now that this is done, your next project should be:
-
-👉 **Vulnerability Management + System Hardening (with Nessus/OpenVAS)**
-
-If you want, I’ll guide you step-by-step just like this one.
-
-
-## MITRE ATT&CK Mapping
-
-| Detection                         | MITRE Technique                      |
-| --------------------------------- | ------------------------------------ |
-| Brute Force                       | T1110 – Brute Force                  |
-| Port Scan                         | T1046 – Network Service Discovery    |
-| PowerShell Abuse                  | T1059.001 – PowerShell               |
-| DNS C2 Communication              | T1071.004 – DNS Protocol             |
-| Data Exfiltration / Traffic Spike | T1041 – Exfiltration Over C2 Channel |
-
----
-
-## 📄 Incident Response Reports
-
-Simulated incident reports were created following SOC investigation procedures including:
-
-* Alert validation
-* Log analysis
-* Threat assessment
-* Containment recommendations
-* Security improvement suggestions
-
----
-
-## Project Structure
-
-```
-splunk-siem-lab/
-│
-├── README.md
-├── dataset/ (reference link only)
-├── logs/
-├── queries/
-├── dashboard/
-├── screenshots/
-└── report/
-```
-
----
-
-
-##  Skills Demonstrated
-
-* SIEM Implementation
-* Log Analysis & Threat Detection
-* SPL Query Development
-* SOC Dashboard Design
-* Alert Engineering
-* Incident Response Simulation
-* MITRE ATT&CK Mapping
-* Cyber Security Investigation
-
----
 
 ## Author
 
