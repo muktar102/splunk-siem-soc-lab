@@ -74,6 +74,13 @@ Alerts trigger when defined thresholds are exceeded, enabling real-time SOC resp
 ## Brute Force Detection
 
 This detection identifies repeated failed login attempts from a single source.
+
+SPL search queries
+```
+*index=botsv3 EventCode=4625
+| stats count by host
+| sort -count
+```
 <p align="center">
   <img src="splunk-siem-lab/screenshots/brute_force.png" width="45%">
   <img src="splunk-siem-lab/screenshots/brute_force2.png" width="45%">
