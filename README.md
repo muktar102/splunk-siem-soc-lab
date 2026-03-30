@@ -20,7 +20,7 @@ The lab focuses on the following areas:
 * Incident investigation and reporting
 * Prioritization and escalation of security events
 * Map detections to MITRE ATT&CK Framework
-  
+
 ---
 
 ## Tools & Technologies
@@ -29,7 +29,9 @@ The lab focuses on the following areas:
 * BOTS v3 Dataset
 * SPL (Search Processing Language)
 * MITRE ATT&CK Framework
-
+<p align="center">
+  <img src="splunk-siem-lab/dashboard/soc_dashboard.png" width="700">
+</p>
 ---
 
 ##SOC Monitoring Dashboard
@@ -42,14 +44,13 @@ A centralized dashboard was created to provide **real-time visibility** into sec
 * Suspicious DNS traffic
 * PowerShell execution trends
 * Network traffic anomalies
-
-![SOC Dashboard](splunk-siem-lab/dashboard/soc_dashboard.png)
-
-👉 This dashboard enables analysts to quickly identify anomalies and prioritize investigations.
+<p align="center">
+  <img src="splunk-siem-lab/dashboard/soc_dashboard.png" width="700">
+</p>
 
 ---
 
-## 🚨 Alert Rules Configuration
+## Alert Rules Configuration
 
 Multiple alerts were configured in Splunk to automatically detect suspicious activities.
 
