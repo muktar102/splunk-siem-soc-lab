@@ -1,9 +1,6 @@
 # Splunk SIEM SOC Monitoring Lab
 
 ## Project Overview
-
-Overview
-
 This project documents the design and implementation of a Security Information and Event Management (SIEM) environment using Splunk Enterprise. The lab was built to replicate the daily workflow of a Security Operations Center (SOC) analyst responsible for monitoring, investigating, and responding to suspicious activity within an enterprise network.
 
 The environment uses the BOTS v3 dataset to simulate realistic security events generated across multiple systems, users, and network segments. These logs were ingested into Splunk and analyzed to identify malicious behavior, create detections, generate alerts, and support incident investigation.
@@ -24,7 +21,7 @@ The lab focuses on the following areas:
 <p align="left">
   <img src="splunk-siem-lab/screenshots/project diagram.png" width="700">
 </p>
----
+
 
 ## Tools & Technologies
 
@@ -75,7 +72,7 @@ Alerts trigger when defined thresholds are exceeded, enabling real-time SOC resp
 
 This detection identifies repeated failed login attempts from a single source.
 
-SPL search queries
+SPL queries
 ```
 *index=botsv3 EventCode=4625
 | stats count by host
@@ -98,6 +95,13 @@ SPL search queries
 ## Suspicious DNS / C2 Detection
 
 Detection of abnormal DNS queries that may indicate communication with malicious domains.
+
+SPL queries
+```
+index=botsv3 sourcetype=syslog
+| stats count by ds
+| sort -count
+```
 ![DNS Results](splunk-siem-lab/screenshots/dns_detection1.png)
 ![DNS Query](splunk-siem-lab/screenshots/dns_detection.png)
 
@@ -114,6 +118,13 @@ Detection of abnormal DNS queries that may indicate communication with malicious
 
 Identifies hosts scanning multiple ports, indicating reconnaissance behavior.
 
+SPL queries
+```
+index=botsv3
+| stats dc(dest_port) as unique_ports by src_ip
+| where unique_ports > 30
+| sort -unique_ports
+```
 ![Port Scan Query](splunk-siem-lab/screenshots/port_scan.png)
 
 ![Port Scan Results](splunk-siem-lab/screenshots/port_scan2.png)
@@ -129,7 +140,13 @@ Identifies hosts scanning multiple ports, indicating reconnaissance behavior.
 ## High Volume Network Communication (Possible Exfiltration)
 
 Detects unusual spikes in communication between systems.
-
+SPL queries
+```
+index=botsv3
+| stats count by src_ip dest_ip
+| where count > 20000
+| sort -count
+```
 ![C2 Detection](splunk-siem-lab/screenshots/c2_detection.png)
 
 **Analysis:**
@@ -144,6 +161,12 @@ Detects unusual spikes in communication between systems.
 
 Monitors abnormal PowerShell execution patterns.
 
+SPL queries
+```
+index=botsv3 "powershell"
+| stats count by host sourcetype
+| sort -count
+```
 ![PowerShell Detection](splunk-siem-lab/screenshots/powershell.png)
 
 **Analysis:**
@@ -168,15 +191,15 @@ Monitors abnormal PowerShell execution patterns.
 
 ## Incident Response Reports
 
-Simulated incident investigations were conducted including:
+Simulated incident investigations were conducted for multiple attack scenarios, including:
 
-* Alert validation
-* Log analysis
-* Threat identification
-* Impact assessment
-* Containment recommendations
+- Alert validation
+- Log analysis
+- Threat identification
+- Impact assessment
+- Containment and remediation recommendations
 
----
+The completed incident response reports are included in the repository and can be found in the `reports/` folder located in the main project directory.
 
 ---
 
@@ -207,6 +230,6 @@ This project demonstrates hands-on experience in:
 ## Author
 
 Ahmed Muktar
-Aspiring SOC Analyst | Cyber Security
+SOC Analyst | Cyber Security
 
 ---
