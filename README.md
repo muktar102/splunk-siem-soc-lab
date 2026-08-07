@@ -36,7 +36,8 @@ The lab focuses on the following areas:
 * VirtualBox / UTM
 
 
-##SOC Monitoring Dashboard
+
+## SOC Monitoring Dashboard
 
 A centralized dashboard was created to provide **real-time visibility** into security events:
 
