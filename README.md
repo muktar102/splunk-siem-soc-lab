@@ -29,8 +29,12 @@ The lab focuses on the following areas:
 * BOTS v3 Dataset
 * SPL (Search Processing Language)
 * MITRE ATT&CK Framework
+* Windows 11
+* Sysmon
+* Splunk Universal Forwarder
+* PowerShell
+* VirtualBox / UTM
 
----
 
 ##SOC Monitoring Dashboard
 
